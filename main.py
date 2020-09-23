@@ -162,7 +162,7 @@ def check_in(stu_name, stu_id, dept_text, customer_app_type_rule_id):
     check_json = get_check_json(stu_name, stu_id, dept_text, customer_app_type_rule_id)
 
     # 提交打卡与结果返回
-    for i in range(1, 10):
+    for i in range(1, 1000):
         response = requests.post(check_url, json=check_json)
         if response.status_code == 200:
             break
